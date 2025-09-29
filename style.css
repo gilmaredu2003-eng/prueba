@@ -1,9 +1,10 @@
 body {
     display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh; /* Asegura que ocupe al menos toda la altura */
+    margin: 20px 0; /* Añade un poco de margen superior e inferior */
     background-color: #cce7ff; /* Un azul un poco más fuerte */
     font-family: 'Arial', sans-serif;
 }
@@ -62,4 +63,43 @@ button:active {
 
 .zero {
     grid-column: span 2;
+}
+
+.history-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e6f2ff;
+    border: 2px solid #004d99;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-container h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    color: #00264d;
+    text-align: center;
+    border-bottom: 1px solid #b3daff;
+    padding-bottom: 5px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+#history-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #d9ecff;
+    text-align: center;
+}
+
+#history-list li:last-child {
+    border-bottom: none;
 }
